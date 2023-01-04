@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "UI8-downloader",
+    "description": "UI8下载器",
+    "version": "1.0",
+    "action": {
+        "default_icon": "icon.png"
+    },
+    "permissions": [
+    ],
+    "host_permissions": [
+        "https://ui8.net/",
+        "http://ui8.net/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://ui8.net/*",
+                "http://ui8.net/"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [],
+            "matches": ["http://ui8.net/*"]
+        }
+    ]
+}
